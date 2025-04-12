@@ -6,7 +6,7 @@ const enviarInformacion = async () => {
     return false;
   }
 
-  mensajeSubtitulo(subtitulo, "Enviando...", 2000);
+  mensajeSubtitulo(subtitulo, "Enviando...", 0);
 
   const imgEntregado =
     "<img src='../assets/img/entregado.png' alt='imagen de chulito' />";
@@ -31,12 +31,11 @@ const enviarInformacion = async () => {
       },
       body: JSON.stringify({
         codUsuarioPeticion: codeUsuario,
-        idiomaPeticion: idiomaDestino.value,
         textoPeticion: textoTraducir,
       }),
     });
   
-    subtitulo.innerHTML = "Traduciendo...";
+    subtitulo.innerHTML = "Consultando...";
   
     const dato = await respuesta.json();
   
@@ -45,11 +44,12 @@ const enviarInformacion = async () => {
     txtRecibido.className = "mensaje recibido";
   
     txtRecibido.innerHTML =
-      dato.traduccion +
+      dato.respuesta +
       "<span class='metadato'><span class='hora'>" +
       horaActual() +
       "</span></span>";
   
+    console.log(dato);
     areaTrabajo.append(txtRecibido);
   
     marco.scrollTop = marco.scrollHeight;
