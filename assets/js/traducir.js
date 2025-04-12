@@ -6,7 +6,7 @@ const enviarInformacion = async () => {
     return false;
   }
 
-  mensajeSubtitulo(subtitulo, "Enviando...", 2000);
+  mensajeSubtitulo(subtitulo, "Enviando...", 0);
 
   const imgEntregado =
     "<img src='../assets/img/entregado.png' alt='imagen de chulito' />";
@@ -33,9 +33,10 @@ const enviarInformacion = async () => {
         codUsuarioPeticion: codeUsuario,
         idiomaPeticion: idiomaDestino.value,
         textoPeticion: textoTraducir,
+        modeloPeticion: modelo.value
       }),
     });
-  
+
     subtitulo.innerHTML = "Traduciendo...";
   
     const dato = await respuesta.json();

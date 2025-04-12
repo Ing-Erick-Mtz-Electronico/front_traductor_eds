@@ -3,6 +3,7 @@ const areaTrabajo = document.getElementById("spn-cuerp");
 const btnEnviar = document.getElementById("img-enviar");
 const subtitulo = document.getElementById("spn-subtitle");
 const idiomaDestino = document.getElementById("cmb-idioma");
+const modelo = document.getElementById("cmd-modelo");
 
 
 const marco = document.querySelector(".traductor-contenedor");

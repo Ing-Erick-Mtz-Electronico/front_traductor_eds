@@ -111,6 +111,19 @@ body {
   border-radius: 10px;
 }
 
+.combo-modelo {
+  background-color: #305f8e;
+  color: #fff;
+  height: 50px;
+  border: 0;
+  flex: 1;
+  font-size: 16px;
+  margin-left: 10px;
+  padding: 5px;
+  min-width: 50px;
+  border-radius: 10px;
+}
+
 .traductor-frm .aceptar {
   border-radius: 50%;
   background-color: #ffff;
