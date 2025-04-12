@@ -3,73 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Traductor</title>
-    <link rel="stylesheet" href="/assets/css/estilos.css" />
+    <title>Generador de imágenes IA</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/estilos.css" />
+    <link rel="icon" type="image/png" href="./assets/img/favicon.ico" />
     <script src="./assets/js/fecha.js" defer></script>
     <script src="./assets/js/mensaje.js" defer></script>
-    <script src="./assets/js/traducir.js" defer></script>
+    <script src="./assets/js/servicio.js" defer></script>
     <script src="./assets/js/principal.js" defer></script>
   </head>
   <body>
     <div class="contenedor">
-      <!-- cabecera: inicio -->
-      <div class="cabecera">
-        <div class="avatar">
-          <img src="./assets/img/avatar.png" alt="Esta imagen es el avatar" />
-        </div>
-        <div class="titulo1">
-          <span> Especialización: traductor </span>
-          <span id="spn-subtitle" class="titulo2"> Bienvenido </span>
-        </div>
+      <div id="caja-imagen" class="contenedor-imagen">
+        <img src="./assets/img/placeholder_512.webp" alt="bienvenido" />
       </div>
-      <!-- cabecera: fin -->
+      <div class="contenedor-texto">
+        <h2>Especialización desarrollo de software: imágenes con IA</h2>
+        <p>
+          ¿Qué imagen deseas generar hoy?<br />Dime qué deseas y lo crearé por
+          ti
+        </p>
 
-      <!-- cuerpo: inicio -->
-      <div class="traductor">
-        <div class="traductor-contenedor">
-          <span id="spn-cuerp"> </span>
-        </div>
-        <form
-          id="frm-traductor"
-          action="javascript:void(0)"
-          class="traductor-frm"
-        >
-          <div class="icono">
-            <img src="./assets/img/icono.png" alt="icono rojo" />
-          </div>
-          <input
-            id="input-texto"
-            type="text"
-            class="caja-traducir"
-            placeholder="¿Qué deseas traducir?"
-            autocomplete="off"
-            autofocus
-          />
-          <select id="cmb-idioma" class="combo-idioma">
-            <option value="ingles">Inglés</option>
-            <option value="español">Español</option>
-            <option value="frances">Francés</option>
-            <option value="aleman">Alemán</option>
-            <option value="italiano">Italiano</option>
-            <option value="portugues">Portugués</option>
-            <option value="ruso">Ruso</option>
-            <option value="chino">Chino</option>
-            <option value="japones">Japonés</option>
-            <option value="arabe">Árabe</option>
-            <option value="coreano">Coreano</option>
-          </select>
-          <span class="aceptar">
-            <div class="circulo">
-              <img
-                id="img-enviar"
-                src="./assets/img/enviar.png"
-                alt="imagen verde de enviar"
-              />
-            </div>
-          </span>
-        </form>
+        <textarea name="area-texto" id="area-texto" rows="8" cols="50" autofocus></textarea>
+        <button id="btn-enviar">Generar imagen</button>
+        <span id="spn-mensaje">Hola mundo</span>
       </div>
-      <!-- cuerpo: fin -->
     </div>
   </body>
 </html>

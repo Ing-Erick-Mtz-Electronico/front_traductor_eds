@@ -1,5 +1,5 @@
-const mensajeSubtitulo = ( subtitulo, texto, ms ) => {
+const asignarMensaje = ( spnMensaje, texto, ms ) => {
   setTimeout(() => {
-    subtitulo.innerHTML = texto;
+    spnMensaje.innerHTML = texto;
   }, ms);
 }
