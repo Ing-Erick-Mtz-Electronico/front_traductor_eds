@@ -9,6 +9,7 @@
     <script src="./assets/js/fecha.js" defer></script>
     <script src="./assets/js/mensaje.js" defer></script>
     <script src="./assets/js/servicio.js" defer></script>
+    <script src="./assets/js/resolucion.js" defer></script>
     <script src="./assets/js/principal.js" defer></script>
   </head>
   <body>
@@ -24,6 +25,18 @@
         </p>
 
         <textarea name="area-texto" id="area-texto" rows="8" cols="50" autofocus></textarea>
+        <div class="contenedor-selectores">
+          <select class="select-modelo" id="select-modelo">
+            <option value="dalle2">DALL-E 2</option>
+            <option value="dalle3">DALL-E 3</option>
+          </select>
+          <select class="select-resolucion" id="select-resolucion">
+          </select>
+          <select class="select-calidad" id="select-calidad">
+            <option value="standard">Standard</option>
+            <option value="hd">HD</option>
+          </select>
+        </div>
         <button id="btn-enviar">Generar imagen</button>
         <span id="spn-mensaje">Hola mundo</span>
       </div>

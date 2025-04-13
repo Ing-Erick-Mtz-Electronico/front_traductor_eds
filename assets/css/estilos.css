@@ -97,3 +97,17 @@ body {
   font-size: 10px;
 }
 
+.contenedor-selectores {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.contenedor-selectores select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  font-size: 12px;
+}

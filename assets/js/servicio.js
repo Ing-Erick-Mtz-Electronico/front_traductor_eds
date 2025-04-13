@@ -1,4 +1,12 @@
 const generarImagen = async () => {
+  const resolucion = selectResolucion.value;
+
+  if (!resolucion) {
+    asignarMensaje(spnMensaje, "Seleccione una resolución", 0);
+    selectResolucion.focus();
+    return false;
+  }
+
   const codeUsuario = crypto.randomUUID();
   const peticion = textArea.value.trim();
 
@@ -25,6 +33,9 @@ const generarImagen = async () => {
         body: JSON.stringify({
           codUsuarioPeticion: codeUsuario,
           textoPeticion: peticion,
+          modelo: selectModelo.value,
+          resolucion: selectResolucion.value,
+          calidad: selectCalidad.value,
         }),
       }
     );
