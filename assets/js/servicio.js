@@ -1,6 +1,5 @@
 const generarImagen = async () => {
   const peticion = textArea.value.trim();
-
   if (!peticion) {
     textArea.focus();
     return false;
@@ -12,6 +11,8 @@ const generarImagen = async () => {
 
   cajaImagen.innerHTML =
     "<img src='./assets/img/loading.gif' alt='Cargando' />";
+
+  const codeUsuario = crypto.randomUUID();
 
   try {
     const respuesta = await fetch(
