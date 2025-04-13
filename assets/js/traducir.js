@@ -23,6 +23,18 @@ const enviarInformacion = async () => {
 
   areaTrabajo.append(txtEnviado);
 
+  const txtRecibido = document.createElement("div");
+  
+  txtRecibido.className = "mensaje recibido";
+
+  txtRecibido.innerHTML =
+      "Esperando respuesta..." +
+      "<span class='metadato'><span class='hora'>" +
+      horaActual() +
+      "</span></span>";
+  
+  areaTrabajo.append(txtRecibido);
+
   try {
     const respuesta = await fetch("http://localhost:3123/api/v1/traducir", {
       method: "POST",
@@ -38,19 +50,12 @@ const enviarInformacion = async () => {
     subtitulo.innerHTML = "Consultando...";
   
     const dato = await respuesta.json();
-  
-    const txtRecibido = document.createElement("div");
-  
-    txtRecibido.className = "mensaje recibido";
-  
+ 
     txtRecibido.innerHTML =
       dato.respuesta +
       "<span class='metadato'><span class='hora'>" +
       horaActual() +
       "</span></span>";
-  
-    console.log(dato);
-    areaTrabajo.append(txtRecibido);
   
     marco.scrollTop = marco.scrollHeight;
   
