@@ -1,4 +1,5 @@
 const generarImagen = async () => {
+  const codeUsuario = crypto.randomUUID();
   const peticion = textArea.value.trim();
 
   if (!peticion) {
@@ -12,7 +13,7 @@ const generarImagen = async () => {
 
   cajaImagen.innerHTML =
     "<img src='./assets/img/loading.gif' alt='Cargando' />";
-
+  
   try {
     const respuesta = await fetch(
       "http://localhost:3123/api/imagen/v1/generar",
